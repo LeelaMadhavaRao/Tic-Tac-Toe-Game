@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="./../css/game.css">
+    <script src="./../index.js" defer></script>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <button class="back-button" onclick="window.location.href='./../index.html';">Back</button>
+            <button class="restart-button" onclick="restartGame()">Restart</button>
+        </header>
+        <div class="player">
+            <p>Player 1: <span id="player1-name">--(X)</span></p>
+            <p>Vs</p>
+            <p>Player 2: <span id="player2-name">--(O)</span></p>
+        </div>
+        <div class="game-board">
+            <div class="column">
+                <button class="cell" id="cell-0" onclick="makeMove(0)"></button>
+                <button class="cell" id="cell-3" onclick="makeMove(3)"></button>
+                <button class="cell" id="cell-6" onclick="makeMove(6)"></button>
+            </div>
+            <div class="column">
+                <button class="cell" id="cell-1" onclick="makeMove(1)"></button>
+                <button class="cell" id="cell-4" onclick="makeMove(4)"></button>
+                <button class="cell" id="cell-7" onclick="makeMove(7)"></button>
+            </div>
+            <div class="column">
+                <button class="cell" id="cell-2" onclick="makeMove(2)"></button>
+                <button class="cell" id="cell-5" onclick="makeMove(5)"></button>
+                <button class="cell" id="cell-8" onclick="makeMove(8)"></button>
+            </div>
+            
+        </div>
+        <div id="game-status"></div>
+        <!-- Popup for winner -->
+        <div id="winner-popup" class="popup hidden">
+            <div class="popup-content">
+                <h2 id="winner-message"></h2>
+                <button onclick="closePopup()">Close</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
